@@ -1,0 +1,32 @@
+curl -O https://raw.githubusercontent.com/browse-kill-ring/browse-kill-ring/master/browse-kill-ring.el
+
+curl -O https://www.emacswiki.org/emacs/download/browse-kill-ring%2b.el
+mv browse-kill-ring%2b.el 'browse-kill-ring+.el'
+
+
+git clone --recursive https://github.com/joaotavora/yasnippet
+
+# remove .git from all repos
+
+git clone https://github.com/haskell/haskell-mode.git
+cd haskell-mode
+make
+
+# remove .git
+
+
+curl -O https://raw.githubusercontent.com/bbatsov/projectile/master/projectile.el
+
+
+curl -O https://www.emacswiki.org/emacs/download/wgrep.el
+
+
+git clone git@github.com:DarwinAwardWinner/ido-ubiquitous.git
+
+# remove .git
+
+curl -O https://raw.githubusercontent.com/nonsequitur/smex/master/smex.el
+
+
+curl -O https://www.emacswiki.org/emacs/download/doremi.el
+curl -O https://www.emacswiki.org/emacs/doremi-cmd.el

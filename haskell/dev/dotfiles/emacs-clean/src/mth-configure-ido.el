@@ -1,0 +1,8 @@
+(require 'ido)
+(ido-mode t)
+(ido-everywhere 1)
+(require 'ido-ubiquitous)
+(ido-ubiquitous-mode 1)
+(require 'ido-describe-fns)
+(require 'icomplete)
+(icomplete-mode 1)
