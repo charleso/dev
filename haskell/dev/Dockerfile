@@ -29,4 +29,7 @@ RUN mkdir /root/.ssh
 RUN chmod 700 /root/.ssh
 RUN ssh-keyscan github.com > /root/.ssh/known_hosts
 RUN chmod 600 /root/.ssh/known_hosts
+
+WORKDIR /work
+
 CMD /bin/zsh -l
