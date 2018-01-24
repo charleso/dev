@@ -1,5 +1,7 @@
 FROM markhibberd/base:latest
 
+ENV LANG C.UTF-8
+
 WORKDIR /ghc/installs
 RUN curl -O https://downloads.haskell.org/~ghc/8.0.2/ghc-8.0.2-x86_64-deb8-linux.tar.xz && \
   tar xf ghc-8.0.2-x86_64-deb8-linux.tar.xz && \

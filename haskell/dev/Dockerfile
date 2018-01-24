@@ -1,12 +1,16 @@
 FROM markhibberd/haskell-build:latest
 
+ENV LANG C.UTF-8
+
 RUN apt-get install -y \
     silversearcher-ag \
     emacs \
+    vim \
     zsh \
     screen \
     gpa \
-    seahorse
+    seahorse \
+    libpq-dev
 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
