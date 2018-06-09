@@ -14,6 +14,6 @@ haskell-dev: haskell/dev/Dockerfile haskell-build
 	docker build -t markhibberd/haskell-dev haskell/dev
 	docker push markhibberd/haskell-dev
 
-haskell-postgresql: haskell/postgresql/Dockerfile
+haskell-postgresql: haskell/postgresql/Dockerfile haskell-build
 	docker build -t markhibberd/haskell-postgresql haskell/postgresql
 	docker push markhibberd/haskell-postgresql
