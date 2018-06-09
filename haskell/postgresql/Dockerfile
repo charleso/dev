@@ -9,8 +9,8 @@ RUN apt-get update && \
     xz-utils \
     libgmp-dev \
     build-essential \
-    libz-dev
-
+    libz-dev \
+    libpq-dev
 
 WORKDIR /ghc/installs
 RUN curl -O https://downloads.haskell.org/~ghc/8.2.2/ghc-8.2.2-x86_64-deb8-linux.tar.xz && \
