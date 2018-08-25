@@ -19,6 +19,5 @@ haskell-postgresql: haskell/postgresql/Dockerfile haskell-build
 	docker push markhibberd/haskell-postgresql
 
 haskell-circleci: haskell/circleci/Dockerfile haskell-postgresql
-	docker build -t markhibberd/haskell-circleci haskell/cir
-cleci
+	docker build -t markhibberd/haskell-circleci haskell/circleci
 	docker push markhibberd/haskell-circleci
