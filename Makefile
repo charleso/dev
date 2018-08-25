@@ -1,6 +1,6 @@
 .PHONY: base haskell-build haskell-dev all
 
-all: haskell-build haskell-dev haskell-postgresql
+all: haskell-build haskell-dev haskell-postgresql haskell-circleci
 
 base: base/Dockerfile
 	docker build -t markhibberd/base base
@@ -17,3 +17,8 @@ haskell-dev: haskell/dev/Dockerfile haskell-build
 haskell-postgresql: haskell/postgresql/Dockerfile haskell-build
 	docker build -t markhibberd/haskell-postgresql haskell/postgresql
 	docker push markhibberd/haskell-postgresql
+
+haskell-circleci: haskell/circleci/Dockerfile haskell-postgresql
+	docker build -t markhibberd/haskell-circleci haskell/cir
+cleci
+	docker push markhibberd/haskell-circleci
