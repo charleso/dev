@@ -8,7 +8,8 @@ RUN apt-get install -y libpq-dev \
     curl \
     lxc \
     iptables \
-    awscli
+    awscli \
+    zip
 
 ### docker install as per official circle-ci images
 
@@ -34,3 +35,7 @@ RUN COMPOSE_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache
 RUN curl -L -o terraform.zip https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip \
   && unzip terraform.zip \
   && mv terraform /usr/local/bin/terraform
+
+RUN curl -L -o packer.zip https://releases.hashicorp.com/packer/1.0.4/packer_1.0.4_linux_amd64.zip \
+  && unzip packer.zip \
+  && mv packer /usr/local/bin
