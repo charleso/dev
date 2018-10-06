@@ -23,3 +23,10 @@ RUN set -ex \
   && rm -rf /tmp/docker /tmp/docker.tgz \
   && which docker \
   && (docker version || true)
+
+
+# docker compose
+RUN COMPOSE_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/docker-compose-latest" \
+  && curl --silent --show-error --location --fail --retry 3 --output /usr/bin/docker-compose $COMPOSE_URL \
+  && chmod +x /usr/bin/docker-compose \
+  && docker-compose version
