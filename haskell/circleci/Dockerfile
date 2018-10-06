@@ -30,3 +30,7 @@ RUN COMPOSE_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache
   && curl --silent --show-error --location --fail --retry 3 --output /usr/bin/docker-compose $COMPOSE_URL \
   && chmod +x /usr/bin/docker-compose \
   && docker-compose version
+
+RUN curl -L -o terraform.zip https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip \
+  && unzip terraform.zip \
+  && mv terraform /usr/local/bin/terraform
