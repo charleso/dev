@@ -8,8 +8,11 @@ RUN apt-get install -y libpq-dev \
     curl \
     lxc \
     iptables \
-    awscli \
-    zip
+    python3 \
+    python3-pip \
+    zip && \
+    pip3 install awscli && \
+    aws --version
 
 ### docker install as per official circle-ci images
 
