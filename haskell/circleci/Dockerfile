@@ -10,6 +10,7 @@ RUN apt-get install -y libpq-dev \
     iptables \
     python3 \
     python3-pip \
+    jq \
     zip && \
     pip3 install awscli && \
     aws --version
